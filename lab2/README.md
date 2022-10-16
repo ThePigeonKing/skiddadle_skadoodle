@@ -166,7 +166,7 @@ int main(int argc, char** argv)
 </details>
 
     
-![png](output_5_0.png)
+![png](imgs/output_5_0.png)
     
 
 
@@ -191,7 +191,7 @@ int main(int argc, char** argv)
 </details>
 
     
-![png](output_6_0.png)
+![png](imgs/output_6_0.png)
     
 
 
@@ -216,7 +216,7 @@ int main(int argc, char** argv)
 </details>
 
     
-![png](output_7_0.png)
+![png](imgs/output_7_0.png)
     
 
 
