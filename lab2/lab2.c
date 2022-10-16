@@ -3,6 +3,7 @@
 #include <omp.h>
 
 #define STEP 10000
+#define CORE_LIMIT 12
 
 int main(int argc, char** argv)
 {
@@ -28,11 +29,8 @@ int main(int argc, char** argv)
         printf("Can't open file\n");
         exit(1);
     }
-    int threads = omp_get_max_threads();
-    // printf("THREADS - %d", threads);
-    // exit(1);
 
-    for (int thread = 1; thread <= threads; thread++) {
+    for (int thread = 1; thread <= CORE_LIMIT; thread++) {
 
         for (int ind = 0; ind < count; ind += STEP) {
             int target = array[ind];
@@ -56,10 +54,10 @@ int main(int argc, char** argv)
             } else {
                 fprintf(fp, "%f\n", end-start);
             }
-            printf("Found occurence of %d at index %d;\n", target, ans);
+            printf("Found occurence of %d at index %d | ", target, ans);
         }
     }
     fclose(fp);
-    printf("Exit...\n");
+    printf("Shutting down...\n");
     return(0);
 }
