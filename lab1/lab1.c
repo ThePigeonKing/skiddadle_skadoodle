@@ -3,7 +3,7 @@
 #include <omp.h>
 
 #define MROWS 100
-#define CORE_LIMIT 6
+#define CORE_LIMIT 12
 
 int main(int argc, char** argv)
 {

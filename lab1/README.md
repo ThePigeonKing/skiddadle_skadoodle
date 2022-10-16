@@ -95,6 +95,7 @@ int main(int argc, char** argv)
 
 <details>
   <summary>Code</summary>
+
     ```python
     # import matplotlib.pyplot as plt
     import seaborn as sns
@@ -117,12 +118,9 @@ int main(int argc, char** argv)
 
 <details>
   <summary>Code</summary>
+
     ```python
-    {
-        "tags": [
-            "hide-input",
-        ]
-    }
+
     data = []
     for i, line in enumerate(dataset):
         data.append([i+1, (sum(line)/len(line))*1000, "Real"])
@@ -136,10 +134,12 @@ int main(int argc, char** argv)
     data1 = pd.DataFrame(data1, columns=["Threads", "AvgTime", "Type"])
     all_data = pd.concat([data1, data_df])
     ```
+
 </details>
 
 <details>
   <summary>Code</summary>
+
     ```python
     {
         "tags": [
@@ -176,6 +176,7 @@ int main(int argc, char** argv)
 
 <details>
   <summary>Code</summary>
+
     ```python
     {
         "tags": [
@@ -205,6 +206,7 @@ int main(int argc, char** argv)
 
 <details>
   <summary>Code</summary>
+
     ```python
     {
         "tags": [
@@ -230,5 +232,11 @@ int main(int argc, char** argv)
     
 ![png](imgs/output_8_0.png)
 
+## Заключение
 
+В ходе работы с использованием **OpenMP** в языке программирования **C** было проведено исследование эффективности многопоточности алгоритма поиска максимального элемента массива.
+На машине было 6 реальных ядер, которые задествовала программа, а последующие являются виртуальными
 
+**Вывод:**
+- Реальный прирост от количества потоков далёк от рассчётного
+- Эффектиность виртальных потоков сильно падает по сравнению с реальными => целесообразность их использования под сомнением.
