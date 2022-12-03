@@ -56,5 +56,19 @@ int main(int argc, char** argv)
     }
     std::cout << schedule_msg << std::endl;
 
-    return 0;
+    std::cout << "\n======= Task7 =======" << std::endl;
+    int goal = 0;
+    int thread = 500;
+    omp_lock_t lock;
+    omp_init_lock(&lock);
+    #pragma omp parallel num_threads(thread)
+    {
+        omp_set_lock(&lock);
+        goal++;
+        omp_unset_lock(&lock);
+    }
+    printf("GOAL = %d\n", goal);
+
+
+    return(0);
 }
