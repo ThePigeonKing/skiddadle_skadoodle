@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	int size = -1;	///< Total number of processors
 	int rank = -1;	///< This processor's number
 
-	const int count = 1e1; ///< Number of array elements
+	const int count = 1000000; ///< Number of array elements
 	// printf("DEFAULT VALUE - %d\n\n", DEBUG);
 	const int random_seed = 1488; ///< RNG seed
 
